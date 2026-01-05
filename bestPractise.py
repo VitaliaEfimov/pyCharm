@@ -56,3 +56,10 @@ result = map(lambda x, y: x + y, list1, list2)
 print(result)
 print(list(result))  # [5, 7, 9]
 
+while (name := input()) != "Левон":
+    counter += 1
+    if name == "Александра":
+        first_index = counter
+
+l = list(map(str.strip, open(0)))
+print(l.index('Левон') - l.index('Александра') - 1)
