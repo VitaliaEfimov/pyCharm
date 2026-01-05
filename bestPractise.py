@@ -56,6 +56,8 @@ result = map(lambda x, y: x + y, list1, list2)
 print(result)
 print(list(result))  # [5, 7, 9]
 
+counter = 0
+
 while (name := input()) != "Левон":
     counter += 1
     if name == "Александра":
