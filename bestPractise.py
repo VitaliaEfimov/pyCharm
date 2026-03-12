@@ -65,3 +65,6 @@ while (name := input()) != "Левон":
 
 l = list(map(str.strip, open(0)))
 print(l.index('Левон') - l.index('Александра') - 1)
+
+s = input()
+lst = list(map(int, s))
