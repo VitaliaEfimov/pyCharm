@@ -47,6 +47,10 @@ print([*map(int,input().split())][::-1])
 
 print(('Не п', 'П')[-1 < int(input()) < 17] + 'ринадлежит')
 
+flag = False
+print(('NO', 'YES')[flag])
+print(int(flag))
+
 print(sum(int(x) for x in map(input, [''] * 3) if int(x) > 0))
 
 list1 = [1, 2, 3, 4]
