@@ -72,3 +72,7 @@ print(l.index('Левон') - l.index('Александра') - 1)
 
 s = input()
 lst = list(map(int, s))
+
+h = 1
+m = 1
+print(f'{h:02d}:{m:02d}')
