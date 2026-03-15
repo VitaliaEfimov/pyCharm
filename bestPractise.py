@@ -76,3 +76,9 @@ lst = list(map(int, s))
 h = 1
 m = 1
 print(f'{h:02d}:{m:02d}')
+
+# Вывод каждого элемента с новой строки
+[print(f'{i}) {ch}') for i,ch in enumerate(input(),1)]
+[print('{}) {}'.format(*z)) for z in enumerate(input(), 1)]
+print(*[f'{i+1}) {lst[i]}' for i in range(len(input()))], sep='\n')
+print(*([f"{index + 1}) {char}" for index, char in enumerate(input())]), sep = '\n')
