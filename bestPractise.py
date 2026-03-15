@@ -97,3 +97,5 @@ print(f'Символ * встречается {len(list(i for i in s if i == "*"
 
 flag = False
 print('YES' if flag else 'NO')
+
+print(sum(input().count('11') >= 3 for _ in range(int(input()))))
