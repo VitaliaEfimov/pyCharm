@@ -92,5 +92,8 @@ print(('Цифр нет', 'Цифра')[bool(re.search(r'\d', input()))])
 s = input()
 print(f'''Символ + встречается {s.count('+')} раз
 Символ * встречается {s.count('*')} раз''')
-print(f'Символ + встречается {len(list(i for i in s if i == plus))} раз')
-print(f'Символ * встречается {len(list(i for i in s if i == star))} раз')
+print(f'Символ + встречается {len(list(i for i in s if i == "+"))} раз')
+print(f'Символ * встречается {len(list(i for i in s if i == "*"))} раз')
+
+flag = False
+print('YES' if flag else 'NO')
