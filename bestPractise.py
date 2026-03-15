@@ -5,6 +5,7 @@ import os
 import httplib2
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
+import re
 
 def get_service_sacc():
     creds_json = os.path.dirname(__file__) + "/creds/sacc1.json"
@@ -82,3 +83,7 @@ print(f'{h:02d}:{m:02d}')
 [print('{}) {}'.format(*z)) for z in enumerate(input(), 1)]
 print(*[f'{i+1}) {lst[i]}' for i in range(len(input()))], sep='\n')
 print(*([f"{index + 1}) {char}" for index, char in enumerate(input())]), sep = '\n')
+
+# проверка, что в строке есть цифры
+print(['Цифр нет','Цифра'][any(map(str.isdigit,input()))])
+print(('Цифр нет', 'Цифра')[bool(re.search(r'\d', input()))])
