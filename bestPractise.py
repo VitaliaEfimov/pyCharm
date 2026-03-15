@@ -87,3 +87,10 @@ print(*([f"{index + 1}) {char}" for index, char in enumerate(input())]), sep = '
 # проверка, что в строке есть цифры
 print(['Цифр нет','Цифра'][any(map(str.isdigit,input()))])
 print(('Цифр нет', 'Цифра')[bool(re.search(r'\d', input()))])
+
+# количество символов
+s = input()
+print(f'''Символ + встречается {s.count('+')} раз
+Символ * встречается {s.count('*')} раз''')
+print(f'Символ + встречается {len(list(i for i in s if i == plus))} раз')
+print(f'Символ * встречается {len(list(i for i in s if i == star))} раз')
