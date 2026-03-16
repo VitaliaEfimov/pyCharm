@@ -99,3 +99,8 @@ flag = False
 print('YES' if flag else 'NO')
 
 print(sum(input().count('11') >= 3 for _ in range(int(input()))))
+# Использование регулярного выражения для проверки валидности номера машины
+print('YES' if re.search("^[АВЕКМНОРСТУХ][0-9]{3}[АВЕКМНОРСТУХ]{2}_[0-9]{2,3}$", input()) else 'NO')
+s = 'А123ВС_45'
+alf = 'АВЕКМНОРСТУХ'
+all(x in alf for x in [s[i] for i in [0,4,5]])
