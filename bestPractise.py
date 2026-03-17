@@ -59,7 +59,7 @@ list2 = [4, 5, 6, 7]
 
 result = map(lambda x, y: x + y, list1, list2)
 print(result)
-print(list(result))  # [5, 7, 9]
+print(list(result))  # [5, 7, 9, 11]
 
 counter = 0
 
