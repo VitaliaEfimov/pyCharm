@@ -14,7 +14,7 @@ print(names.remove('Timur')) # None Удаляем первый найденны
 print(names) # ['Anders', 'Gvido', 'Roman', 'Josef', 'Anton']
 # names.remove('Гречка') # Если элемента нет - ошибка ValueError: list.remove(x): x not in list
 names = ['Gvido', 'Roman', 'Timur']
-print(names.pop(1)) # Удаляем элемент с индексом 1. Можно без параметра, тогда будет удален и возвращен последний элемент
+print(names.pop(1)) # Roman. Удаляем элемент с индексом 1. Можно без параметра, тогда будет удален и возвращен последний элемент
 print(names)
 names = ['Timur', 'Gvido', 'Roman', 'Timur', 'Anders', 'Timur']
 print(names.count('Timur')) # Получение количества переданного элемента в списке.
