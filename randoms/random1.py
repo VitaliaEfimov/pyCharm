@@ -1,19 +1,18 @@
-
 from random import *
 
-seed(1)   # явно устанавливаем начальное значение для генератора случайных чисел. Меняется после вызовов из random
+seed(1)   # Явно устанавливаем начальное значение для генератора случайных чисел. Меняется после вызовов из random
 
 for _ in range(10):
     print(randint(1, 100))
 
-num1 = randint(0, 17)
+num1 = randint(0, 17) # Включая правое значение
 num2 = randint(-5, 5)
 
 print()
 print(num1)
 print(num2)
 
-num = randrange(0, 101, 10)
+num = randrange(0, 101, 10) # не включая правое значение
 print()
 print(num)
 
