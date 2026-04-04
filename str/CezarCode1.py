@@ -18,7 +18,7 @@ for i in s:
     if i.isalpha():
         islower = i == i.lower()
         ind = a.find(i.lower()) + rot
-        r += get_chr(ind, islower, a, len(a))
+        r += get_chr(ind, islower, a, len(a) - 1)
     else:
         r += i
 print(r)
