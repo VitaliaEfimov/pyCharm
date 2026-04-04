@@ -104,3 +104,5 @@ print('YES' if re.search("^[АВЕКМНОРСТУХ][0-9]{3}[АВЕКМНОРС
 s = 'А123ВС_45'
 alf = 'АВЕКМНОРСТУХ'
 all(x in alf for x in [s[i] for i in [0,4,5]])
+
+[print(('Решка', 'Орел')[__import__('random').randint(0, 1)]) for _ in range(10)]
