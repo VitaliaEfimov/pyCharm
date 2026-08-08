@@ -41,6 +41,9 @@ myset = set(['aaa', 'bbbb', 'cc'])
 print(myset) # {'cc', 'bbbb', 'aaa'}
 myset = set('aaa bbbb cc')
 print(myset) # {'b', ' ', 'c', 'a'}
+myset = {'aaa bbbb cc'}
+print(type(myset)) # <class 'set'>
+print(myset) # {'aaa bbbb cc'}
 # myset1 = {1, 2, [5, 6], 7}  # TypeError: cannot use 'list' as a set element (unhashable type: 'list') множество не может содержать список
 # myset2 = {1, 2, {5, 6}, 7}  # TypeError: cannot use 'set' as a set element (unhashable type: 'set') множество не может содержать множество
 myset = {1, 2, (5, 6), 7}  # множество может содержать кортеж
