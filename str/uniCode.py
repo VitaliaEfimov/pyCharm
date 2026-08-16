@@ -6,22 +6,22 @@ chr1 = chr(65) # Получение символа из кода
 chr2 = chr(75)
 chr3 = chr(110)
 print(chr1, chr2, chr3) # A K n
-print(ord('A'))
+print(ord('A')) # 65
 for i in range(26):
     print(chr(ord('A') + i), end='') # Вывод всех букв английского алфавита в верхнем регистре
 print()
-print(ord('a'))
+print(ord('a')) # 97
 for i in range(26):
     print(chr(ord('a') + i), end='') # Вывод всех букв английского алфавита в нижнем регистре
 print()
-print(ord('А'))
+print(ord('А')) # 1040
 for i in range(32):
     print(chr(ord('А') + i), end='') # Вывод всех букв русского алфавита в нижнем регистре
 print()
-print(ord('а'))
+print(ord('а')) # 1072
 for i in range(32):
     print(chr(ord('а') + i), end='') # Вывод всех букв русского алфавита в нижнем регистре
 print()
-print(ord('ё'), ord(' '), ord('Ё'), ord('6'))
+print(ord('ё'), ord(' '), ord('Ё'), ord('6')) # 1105 32 1025 54
 # for i in range(4000): # Вывод всех символов с их кодом
 #     print(f'{i} {chr(i)}')
