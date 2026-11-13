@@ -188,6 +188,8 @@ print(is_num('1-1')) # False
 print(is_num('-34.67')) # True
 print(is_num('123.122.12')) # False
 
+print()
+
 words = [
     'abandon', 'besides', 'access', 'friday',
     'bestow', 'abound', 'absent', 'beware',
@@ -201,5 +203,82 @@ words = [
 
 some_words = sorted(filter(lambda x: len(x) == 6, words))
 print(*some_words) # aboard abound abrupt absent absorb accept access beside bestow beware beyond friday sunday
+print()
 
+numbers = [
+    46, 61, 34, 17, 56, 26, 93, 1, 3,
+    82, 71, 37, 80, 27, 77, 94, 34, 100,
+    36, 81,
+]
+
+numbers = filter(lambda num: not (num % 2 == 1 and num > 47), numbers)
+numbers = map(lambda num: num // 2 if num % 2 == 0 else num, numbers)
+
+print(*numbers) # 23 17 17 28 13 1 3 41 37 40 27 47 17 50 18
+print()
+
+data = [
+    (11799448, 'Ohio'), (10711908, 'Georgia'),
+    (10077331, 'Michigan'), (10439388, 'Virginia'),
+    (7705281, 'Washington'), (7151502, 'Arizona'),
+    (7029917, 'Massachusetts'), (6910840, 'Tennessee'),
+]
+
+for population, city in sorted(data, key=lambda x: x[1][-1], reverse=True):
+    print(f'{city}: {population}')
+# for d in sorted(data, key=lambda x: x[1][-1], reverse=True):
+#     print(f'{d[1]}: {d[0]}')
+"""
+Massachusetts: 7029917
+Ohio: 11799448
+Michigan: 10077331
+Washington: 7705281
+Tennessee: 6910840
+Georgia: 10711908
+Virginia: 10439388
+Arizona: 7151502
+"""
+
+print()
+
+data = [
+   'работа', 'слово', 'место', 'лицо', 'друг',
+   'глаз', 'вопрос', 'дом', 'сторона',
+]
+print(*sorted(data, key=lambda word: (len(word), word))) # дом глаз друг лицо место слово вопрос работа сторона
+# print(*sorted(sorted(data), key=lambda x: len(x)))
+print()
+
+mixed_list = ['cow', 12, 'chicken', 'sand', 75]
+
+print(max(mixed_list, key=lambda el: (type(el) is int, el))) # 75
+# print(max(x for x in mixed_list if isinstance(x, int))) # 75
+print()
+
+mixed_list = ['a', 'ab', 3, 5, 1, 8, 0, 'c', 'ac', 'aab']
+print(*sorted(mixed_list, key=lambda el: (type(el) is str, el))) # 0 1 3 5 8 a aab ab ac c
+print()
+
+s = '244 11 120'
+# print(*list(map(lambda x: 255 - int(x), s.split()))) # 11 244 135
+print(*map(lambda c: 255 - int(c), s.split())) # 11 244 135
+print()
+
+
+from functools import reduce
+r = "2 4 3"
+x = 10
+evaluate = lambda coefficients, x: reduce(lambda s, a: s * x + a, coefficients, 0)
+
+print(evaluate([*map(int, r.split())], x)) # 243
+
+def evaluate(c, x):
+    s = 0
+    l = len(c)
+    for i in range(l-1, -1, -1):
+        s += x**i*c[l-i-1]
+    return s
+c = list(int(x) for x in r.split())
+print(evaluate(c, x)) # 243
+print()
 
